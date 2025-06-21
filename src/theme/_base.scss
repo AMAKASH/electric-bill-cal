@@ -1,0 +1,70 @@
+@import "./fonts";
+@import "./variables";
+
+/*** 1. Default Css  ***/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: $color-black;
+  font-family: $font-en-primary;
+  font-style: normal;
+  background-color: $color-white;
+  font-weight: 100;
+  font-size: $font-dis-size;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  display: block;
+  color: $color-black;
+  font-family: $font-en-primary;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container {
+  max-width: $container-max-width;
+  width: 100%;
+  display: block;
+  margin: auto;
+  //padding-inline: 2rem;
+}
+
+/*** 2. Reusable Css  ***/
+.transition {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}

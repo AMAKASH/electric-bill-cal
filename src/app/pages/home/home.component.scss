@@ -1,0 +1,183 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #c3dcd3, #b7d4c9);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tip-calculator {
+  background: linear-gradient(135deg, #40816b, #256d5b);
+  color: white;
+  padding: 24px;
+  border-radius: 16px;
+  width: 300px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.section span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.input-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  input,
+  input:focus,
+  input:focus-visible,
+  input:active,
+  input:hover,
+  input:disabled,
+  input:read-only,
+  input:required,
+  input:checked,
+  input:visited {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    box-shadow: none;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+}
+
+.input-box button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.tip-option {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  span{
+    font-size: 14px;
+  }
+}
+
+.tip-option small {
+  display: block;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.custom {
+  font-weight: bold;
+}
+
+.people-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.people-counter button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.result-box {
+  background: linear-gradient(to bottom, #195d4c, #144d3e);
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.result-box .per-person {
+  text-align: center;
+  position: relative;
+}
+
+.per-person h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.per-person .external-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.summary div span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.7;
+}
