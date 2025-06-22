@@ -1,25 +1,42 @@
 <div class="tip-calculator">
   <div class="header">
     <h2>Electricity Bill Calculator</h2>
-
   </div>
 
   <div class="section">
-    <span>Used Unit</span>
+    <span>Previous Month Used Unit</span>
     <div class="input-box">
-      <input id="unit" type=number [(ngModel)]="unit" placeholder="Enter used unit" (keydown.enter)="calculateTotal()"  />
+      <input id="prevunit" type="number" [(ngModel)]="prevUnit" placeholder="Enter used unit" />
+    </div>
+  </div>
+
+  <div class="section">
+    <span>Current Month Used Unit</span>
+    <div class="input-box">
+      <input id="currunit" type="number" [(ngModel)]="currUnit" placeholder="Enter used unit"
+        (keydown.enter)="calculateTotal()" />
       <button class="edit-icon" (click)="calculateTotal()">✎</button>
     </div>
   </div>
 
   <div class="section">
-    <span >Calculation BreakDown</span>
+    <span>Used Unit</span>
     <div class="tip-grid">
-      <div class="tip-option" *ngFor="let item of breakdowns"><span>
-       {{ item.unit }} Unit &#64; BDT {{ item.price.toFixed(2) }} = BDT {{ item.total.toFixed(2) }}</span></div>
-      <div class="tip-option" *ngIf="breakdowns.length === 0"><span>
-        No breakdown available. Please enter a valid unit.</span></div>
+      <div class="tip-option subtotal">BDT {{ unit.toFixed(2) }}</div>
+      </div>
+      </div>
 
+  <div class="section">
+    <span>Bill Calculation BreakDown</span>
+    <div class="tip-grid">
+      <div class="tip-option" *ngFor="let item of breakdowns">
+        <span>
+          {{ item.unit }} Unit &#64; BDT {{ item.price.toFixed(2) }} = BDT
+          {{ item.total.toFixed(2) }}</span>
+      </div>
+      <div class="tip-option" *ngIf="breakdowns.length === 0">
+        <span> No breakdown available. Please enter a valid unit.</span>
+      </div>
     </div>
   </div>
 
@@ -34,7 +51,6 @@
     <div class="per-person">
       <h1>BDT {{ total.toFixed(2) }}</h1>
       <span>Total Electricity Bill</span>
-
     </div>
     <div class="summary">
       <div>
